@@ -112,24 +112,38 @@
 //     count += mas[i]; 
 // }
 // Console.WriteLine(count);
+// Вариант 6
+// int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+// bool f = true;
+// for (int i = 0; i < numbers.Length; i++)
+// {
+//     for (int j = i + 1; j < numbers.Length; j++)
+//     {
+//         if (numbers[i] + 1 != numbers[j])
+//         {
+//             f = false;
+//             continue;
+//         }
+//         else
+//         {
+//             break;
+//         }
 
-int[] numbers = { 1, 2, 3, 4, 5, 7, 8, 9, 0 };
-bool f = false;
-for (int i = 0; i < numbers.Length; i++)
+//     }
+// }
+// Console.WriteLine(f ? "Отсортирован" : "Не отсортирован");
+// Вариант 7
+
+int[] mass2 = { 2, 4, 8, -1 };
+int pl_n = 0;
+foreach (int num in mass2)
 {
-    for (int j = i + 1; j < numbers.Length;)
+    if (num >= 0)
     {
-        if (numbers[i] + 1 == numbers[j])
-        {
-            f = true;
-            continue;
-        }
-        else
-        {
-            break;
-        }
-
+        pl_n += 1;
+    } else
+    {
+        break;
     }
 }
-Console.WriteLine(f ? "Отсортирован" : "Не отсортирован");
-
+Console.WriteLine(pl_n);
